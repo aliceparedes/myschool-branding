@@ -1,0 +1,1199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MySchool — Brand Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* primary */
+    --blue-50:  #EAF7FE;
+    --blue-100: #CFEDFB;
+    --blue-200: #A3DEF7;
+    --blue-300: #6CC9F1;
+    --blue-400: #34B5EB;
+    --blue-500: #0FA9E8;  /* PRIMARY */
+    --blue-600: #0A8AC0;
+    --blue-700: #086C97;
+    --blue-800: #064F6F;
+    --blue-900: #053A52;
+
+    /* neutrals (cool, ~hue 230) */
+    --ink-0:   #FFFFFF;
+    --ink-25:  #FAFBFC;
+    --ink-50:  #F4F6F8;
+    --ink-100: #E9ECEF;
+    --ink-200: #D9DEE3;
+    --ink-300: #B7BFC7;
+    --ink-400: #8B95A0;
+    --ink-500: #5F6B77;
+    --ink-600: #404B56;
+    --ink-700: #2A333C;
+    --ink-800: #1A2128;
+    --ink-900: #0D1116;
+
+    /* avatar / category pastels (from product) */
+    --mint:    #BFEED9;  --mint-ink:   #1E8F5F;
+    --amber:   #FBE0A8;  --amber-ink:  #9A6A0C;
+    --teal:    #BFE7DF;  --teal-ink:   #2A7A6B;
+    --sage:    #C9EBC2;  --sage-ink:   #3F8A37;
+    --lilac:   #DCD2F3;  --lilac-ink:  #6E55B5;
+    --peach:   #F8D6C2;  --peach-ink:  #B0541D;
+
+    /* status */
+    --green-500: #22A06B;
+    --amber-500: #E5A30B;
+    --red-500:   #DC4F4F;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+
+    --shadow-sm: 0 1px 2px rgba(13,17,22,.06), 0 1px 1px rgba(13,17,22,.04);
+    --shadow-md: 0 6px 18px -6px rgba(13,17,22,.12), 0 2px 4px rgba(13,17,22,.04);
+    --shadow-lg: 0 24px 48px -16px rgba(13,17,22,.18), 0 4px 8px rgba(13,17,22,.04);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-feature-settings:'cv11','ss01','ss03';
+    color:var(--ink-800);
+    background:var(--ink-25);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    line-height:1.5;
+  }
+  a{color:inherit}
+  .mono{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace}
+  .serif{font-family:'Instrument Serif',ui-serif,Georgia,serif;font-style:italic;letter-spacing:-.01em}
+  .container{max-width:1240px;margin:0 auto;padding:0 48px}
+
+  /* ───── Top nav ───── */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:saturate(140%) blur(12px);
+    -webkit-backdrop-filter:saturate(140%) blur(12px);
+    background:rgba(255,255,255,.82);
+    border-bottom:1px solid var(--ink-100);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:64px;
+  }
+  .topbar nav{display:flex;gap:28px}
+  .topbar nav a{
+    text-decoration:none;color:var(--ink-500);font-size:13.5px;font-weight:500;
+    letter-spacing:.01em;
+  }
+  .topbar nav a:hover{color:var(--ink-800)}
+  .topbar .meta{font-size:12px;color:var(--ink-400)}
+  .topbar .meta .mono{color:var(--ink-600)}
+
+  /* logo lockup */
+  .lockup{display:inline-flex;align-items:center;gap:10px}
+  .lockup .mark{flex:none}
+  .lockup .word{
+    font-weight:600;letter-spacing:-.02em;color:var(--ink-900);
+    font-size:18px;
+  }
+
+  /* ───── Hero ───── */
+  .hero{
+    padding:96px 0 56px;
+    border-bottom:1px solid var(--ink-100);
+    background:
+      radial-gradient(900px 480px at 88% -10%, rgba(15,169,232,.12), transparent 60%),
+      radial-gradient(700px 360px at 0% 100%, rgba(15,169,232,.06), transparent 60%);
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--blue-700);
+    padding:6px 10px;border-radius:999px;
+    background:var(--blue-50);border:1px solid var(--blue-100);
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--blue-500)}
+  h1.display{
+    font-family:'Inter';
+    font-size:88px;line-height:.96;letter-spacing:-.045em;
+    font-weight:600;color:var(--ink-900);
+    margin:24px 0 0;
+    text-wrap:balance;
+  }
+  h1.display em{font-family:'Instrument Serif';font-style:italic;font-weight:400;letter-spacing:-.02em;color:var(--blue-500)}
+  .lede{
+    max-width:640px;margin-top:24px;
+    font-size:19px;line-height:1.55;color:var(--ink-500);
+  }
+  .hero-meta{
+    margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+    border-top:1px solid var(--ink-100);padding-top:24px;
+  }
+  .hero-meta dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-400);margin-bottom:6px}
+  .hero-meta dd{margin:0;font-size:14.5px;color:var(--ink-800);font-weight:500}
+
+  /* ───── Section scaffolding ───── */
+  section.band{padding:80px 0;border-bottom:1px solid var(--ink-100)}
+  section.band.dark{background:var(--ink-900);color:var(--ink-100);border-bottom-color:var(--ink-800)}
+  section.band.dark h2.section-title,
+  section.band.dark .section-num{color:var(--ink-0)}
+  section.band.dark .section-kicker{color:var(--ink-300)}
+  .section-head{display:grid;grid-template-columns:120px 1fr;gap:48px;margin-bottom:48px;align-items:start}
+  .section-num{
+    font-family:'Instrument Serif';font-style:italic;font-weight:400;
+    font-size:44px;color:var(--blue-500);letter-spacing:-.02em;line-height:1;
+  }
+  h2.section-title{
+    font-size:40px;line-height:1.05;letter-spacing:-.03em;font-weight:600;
+    color:var(--ink-900);margin:0;
+  }
+  .section-kicker{margin-top:14px;color:var(--ink-500);max-width:620px;font-size:15.5px}
+
+  /* ───── Logo section ───── */
+  .logo-grid{
+    display:grid;grid-template-columns:1.4fr 1fr;gap:24px;
+  }
+  .panel{
+    background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);
+    padding:32px;position:relative;
+  }
+  .panel .label{
+    position:absolute;top:16px;left:20px;
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-400);
+    font-weight:500;
+  }
+  .panel.dark{background:var(--ink-900);border-color:var(--ink-800)}
+  .panel.dark .label{color:var(--ink-400)}
+  .panel.blue{background:var(--blue-500);border-color:var(--blue-600)}
+  .panel.blue .label{color:rgba(255,255,255,.7)}
+  .logo-stage{
+    height:280px;display:flex;align-items:center;justify-content:center;
+  }
+  .logo-stage.small{height:160px}
+
+  .logo-row-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+  .logo-row-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
+
+  /* clear-space diagram */
+  .clearspace{
+    height:280px;display:flex;align-items:center;justify-content:center;
+    background:
+      repeating-linear-gradient(0deg, transparent 0 23px, rgba(15,169,232,.07) 23px 24px),
+      repeating-linear-gradient(90deg, transparent 0 23px, rgba(15,169,232,.07) 23px 24px);
+    border-radius:var(--radius-md);
+    position:relative;
+  }
+  .clearspace-inner{
+    display:inline-flex;align-items:center;gap:14px;padding:24px;
+    outline:1px dashed var(--blue-400);outline-offset:0;
+    background:#fff;
+  }
+  .clearspace-x{
+    position:absolute;font-family:'JetBrains Mono';font-size:11px;color:var(--blue-700);
+    background:#fff;padding:2px 6px;border-radius:4px;border:1px solid var(--blue-200);
+  }
+
+  /* sizing scale */
+  .sizing{
+    display:flex;align-items:flex-end;gap:32px;justify-content:center;
+    height:280px;padding:0 16px;
+  }
+  .sizing-item{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .sizing-item .lab{font-family:'JetBrains Mono';font-size:11px;color:var(--ink-400)}
+
+  /* dont grid */
+  .dont-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+  .dont{
+    background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-md);
+    padding:20px;display:flex;flex-direction:column;gap:12px;min-height:180px;
+    position:relative;overflow:hidden;
+  }
+  .dont .stage{flex:1;display:flex;align-items:center;justify-content:center}
+  .dont .cap{
+    font-size:12px;color:var(--ink-500);display:flex;align-items:center;gap:6px;
+  }
+  .dont .x{
+    width:16px;height:16px;border-radius:50%;background:var(--red-500);
+    color:#fff;display:inline-grid;place-items:center;font-size:11px;font-weight:600;
+    line-height:1;flex:none;
+  }
+
+  /* ───── Colors section ───── */
+  .palette-primary{
+    display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:stretch;
+  }
+  .swatch-hero{
+    background:var(--blue-500);color:#fff;border-radius:var(--radius-lg);
+    padding:36px;display:flex;flex-direction:column;justify-content:space-between;
+    min-height:340px;position:relative;overflow:hidden;
+  }
+  .swatch-hero::after{
+    content:"";position:absolute;right:-60px;bottom:-60px;width:260px;height:260px;
+    border-radius:50%;background:rgba(255,255,255,.08);
+  }
+  .swatch-hero::before{
+    content:"";position:absolute;right:120px;bottom:60px;width:80px;height:80px;
+    border-radius:50%;background:rgba(255,255,255,.08);
+  }
+  .swatch-hero .name{font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;font-weight:500}
+  .swatch-hero .nm{font-size:48px;line-height:1.05;letter-spacing:-.03em;font-weight:600;margin-top:8px;position:relative;z-index:1}
+  .swatch-hero .vals{font-family:'JetBrains Mono';font-size:12.5px;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;opacity:.88;position:relative;z-index:1}
+  .swatch-hero .vals .k{opacity:.7}
+
+  .scale{display:grid;grid-template-columns:1fr;gap:8px}
+  .scale-row{
+    display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;
+    padding:10px 14px;background:#fff;border:1px solid var(--ink-100);border-radius:10px;
+  }
+  .scale-chip{width:40px;height:40px;border-radius:8px;border:1px solid rgba(0,0,0,.05)}
+  .scale-row .nm{font-size:13.5px;font-weight:500;color:var(--ink-800)}
+  .scale-row .hx{font-family:'JetBrains Mono';font-size:12px;color:var(--ink-500)}
+
+  .palette-neutrals{margin-top:24px}
+  .neutral-bar{
+    display:grid;grid-template-columns:repeat(10,1fr);gap:0;
+    border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--ink-100);
+  }
+  .neutral-bar > div{
+    height:88px;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:10px;font-family:'JetBrains Mono';font-size:11px;
+  }
+  .neutral-bar .lb{opacity:.8;font-weight:500;display:block}
+  .neutral-bar .hx{display:block;font-size:10.5px;opacity:.6;margin-top:2px}
+
+  .cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:24px}
+  .cat{
+    background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-md);
+    padding:16px;display:flex;flex-direction:column;gap:12px;
+  }
+  .cat .ball{
+    width:48px;height:48px;border-radius:50%;display:grid;place-items:center;
+    font-size:14px;font-weight:600;letter-spacing:.01em;
+  }
+  .cat .nm{font-size:13.5px;font-weight:500;color:var(--ink-800)}
+  .cat .hx{font-family:'JetBrains Mono';font-size:11px;color:var(--ink-400)}
+
+  .usage-bars{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px}
+  .usage-bar{
+    display:grid;grid-template-columns:140px 1fr;gap:16px;align-items:center;
+    font-size:13px;color:var(--ink-500);
+  }
+  .usage-bar .label{color:var(--ink-700);font-weight:500}
+  .usage-bar .track{
+    height:18px;border-radius:999px;background:var(--ink-100);overflow:hidden;
+    display:flex;
+  }
+  .usage-bar .seg{height:100%}
+
+  /* ───── Typography ───── */
+  .type-stack{display:grid;grid-template-columns:1fr;gap:24px}
+  .type-row{
+    background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);
+    padding:32px;display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:center;
+  }
+  .type-meta .nm{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-400);font-weight:500}
+  .type-meta .role{font-size:18px;font-weight:600;color:var(--ink-900);margin-top:4px;letter-spacing:-.01em}
+  .type-meta .specs{margin-top:14px;font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink-500);line-height:1.7}
+  .type-sample{color:var(--ink-900)}
+  .display-xl{font-family:'Inter';font-size:88px;line-height:.96;letter-spacing:-.045em;font-weight:600}
+  .display-l{font-family:'Inter';font-size:56px;line-height:1.02;letter-spacing:-.035em;font-weight:600}
+  .display-serif{font-family:'Instrument Serif';font-style:italic;font-size:72px;line-height:1;letter-spacing:-.02em;font-weight:400;color:var(--blue-500)}
+  .head-m{font-family:'Inter';font-size:32px;line-height:1.15;letter-spacing:-.02em;font-weight:600}
+  .body-l{font-family:'Inter';font-size:18px;line-height:1.55;color:var(--ink-600);font-weight:400}
+  .body-m{font-family:'Inter';font-size:14.5px;line-height:1.55;color:var(--ink-600)}
+  .code-s{font-family:'JetBrains Mono';font-size:13px;color:var(--ink-700);background:var(--ink-50);padding:2px 6px;border-radius:4px}
+
+  /* ───── Components ───── */
+  .comp-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+  .card{
+    background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);
+    padding:28px;
+  }
+  .card h3{
+    margin:0 0 6px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-400);font-weight:500;
+  }
+  .card .demo{margin-top:20px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .span-4{grid-column:span 4}
+  .span-5{grid-column:span 5}
+  .span-6{grid-column:span 6}
+  .span-7{grid-column:span 7}
+  .span-8{grid-column:span 8}
+  .span-12{grid-column:span 12}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    height:40px;padding:0 18px;border-radius:10px;
+    font-size:14px;font-weight:500;font-family:inherit;letter-spacing:-.005em;
+    border:1px solid transparent;cursor:pointer;text-decoration:none;
+    transition:transform .08s ease, box-shadow .12s ease, background .12s ease;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--blue-500);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.18) inset, 0 1px 2px rgba(8,108,151,.3)}
+  .btn-primary:hover{background:var(--blue-600)}
+  .btn-secondary{background:#fff;color:var(--ink-800);border-color:var(--ink-200)}
+  .btn-secondary:hover{border-color:var(--ink-300);background:var(--ink-25)}
+  .btn-ghost{background:transparent;color:var(--ink-600)}
+  .btn-ghost:hover{background:var(--ink-50);color:var(--ink-800)}
+  .btn-sm{height:32px;padding:0 12px;font-size:13px;border-radius:8px}
+  .btn-icon{width:32px;padding:0;justify-content:center}
+  .btn svg{width:16px;height:16px}
+
+  /* pill / badge */
+  .pill{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:4px 10px;border-radius:999px;
+    font-size:12px;font-weight:500;
+    background:var(--ink-50);color:var(--ink-700);border:1px solid var(--ink-100);
+  }
+  .pill.blue{background:var(--blue-50);color:var(--blue-700);border-color:var(--blue-100)}
+  .pill.green{background:#E5F5EC;color:#1B7A4F;border-color:#CFEBD9}
+  .pill.amber{background:#FBF2D9;color:#8C5C00;border-color:#F4E2A9}
+  .pill.red{background:#FBE7E7;color:#A33333;border-color:#F4CCCC}
+
+  /* avatar */
+  .avatar{
+    width:36px;height:36px;border-radius:50%;display:inline-grid;place-items:center;
+    font-size:12.5px;font-weight:600;letter-spacing:.01em;font-family:inherit;
+  }
+  .av-row{display:flex;gap:10px;flex-wrap:wrap}
+
+  /* input */
+  .field{
+    display:flex;align-items:center;gap:10px;
+    height:44px;padding:0 14px;
+    border:1px solid var(--ink-200);border-radius:10px;background:#fff;
+    font-size:14px;color:var(--ink-500);min-width:280px;
+  }
+  .field:focus-within{border-color:var(--blue-400);box-shadow:0 0 0 4px rgba(15,169,232,.14)}
+  .field svg{width:16px;height:16px;color:var(--ink-400)}
+
+  /* segmented */
+  .seg{
+    display:inline-flex;background:var(--ink-50);border:1px solid var(--ink-100);
+    border-radius:10px;padding:3px;
+  }
+  .seg button{
+    background:transparent;border:0;font:inherit;font-size:13px;font-weight:500;
+    color:var(--ink-500);padding:7px 14px;border-radius:7px;cursor:pointer;
+  }
+  .seg button.on{background:#fff;color:var(--ink-800);box-shadow:var(--shadow-sm)}
+
+  /* card stat */
+  .stat-card{
+    background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);
+    padding:22px;min-width:0;
+  }
+  .stat-card .lbl{font-size:12.5px;color:var(--ink-500);font-weight:500}
+  .stat-card .val{font-size:36px;font-weight:600;letter-spacing:-.02em;color:var(--ink-900);margin-top:8px;line-height:1}
+  .stat-card .delta{font-size:12px;color:var(--green-500);margin-top:8px;font-weight:500;font-family:'JetBrains Mono'}
+  .stat-card .spark{margin-top:14px;height:36px;display:block}
+
+  /* mini table */
+  .mini-table{width:100%;border-collapse:collapse;font-size:13.5px}
+  .mini-table th{
+    text-align:left;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-400);font-weight:500;padding:10px 12px;border-bottom:1px solid var(--ink-100);
+  }
+  .mini-table td{padding:12px;border-bottom:1px solid var(--ink-50)}
+  .mini-table tr:last-child td{border-bottom:0}
+  .mini-table .name{font-weight:500;color:var(--ink-800)}
+  .mini-table .meta{color:var(--ink-500)}
+
+  /* icon previews */
+  .icon-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:12px;margin-top:8px}
+  .icon-card{
+    aspect-ratio:1/1;background:#fff;border:1px solid var(--ink-100);border-radius:12px;
+    display:grid;place-items:center;color:var(--ink-700);
+  }
+  .icon-card svg{width:22px;height:22px;stroke-width:1.6}
+  .icon-card .lab{position:absolute}
+
+  /* voice */
+  .voice{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .voice .v{
+    background:#fff;border:1px solid var(--ink-100);border-radius:var(--radius-lg);
+    padding:28px;display:flex;flex-direction:column;gap:14px;
+  }
+  .voice .v .kk{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-400);font-weight:500}
+  .voice .v .ph{font-family:'Instrument Serif';font-style:italic;font-size:30px;line-height:1.15;letter-spacing:-.015em;color:var(--ink-900);font-weight:400}
+  .voice .v ul{margin:0;padding-left:18px;color:var(--ink-600);font-size:14px;line-height:1.65}
+  .voice .v ul li::marker{color:var(--blue-500)}
+
+  /* application examples */
+  .apps{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .app{
+    border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--ink-100);
+    background:#fff;position:relative;
+  }
+  .app .frame{height:340px;display:flex}
+  .app .cap{
+    padding:14px 18px;font-size:12px;color:var(--ink-500);
+    border-top:1px solid var(--ink-100);background:var(--ink-25);
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .app .cap .mono{color:var(--ink-700)}
+
+  /* mock sidebar (for app preview) */
+  .mock-side{
+    width:200px;background:#fff;border-right:1px solid var(--ink-100);
+    padding:14px;display:flex;flex-direction:column;gap:2px;
+  }
+  .mock-side .top{display:flex;align-items:center;gap:8px;padding:6px 8px 14px;border-bottom:1px solid var(--ink-50);margin-bottom:8px}
+  .mock-side .item{
+    display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;
+    font-size:12.5px;color:var(--ink-600);
+  }
+  .mock-side .item.on{background:var(--blue-50);color:var(--blue-700);font-weight:500}
+  .mock-side .item .dt{width:14px;height:14px;border-radius:4px;background:var(--ink-200)}
+  .mock-side .item.on .dt{background:var(--blue-400)}
+
+  .mock-main{flex:1;padding:18px 20px;background:var(--ink-25);overflow:hidden}
+  .mock-h{font-size:18px;font-weight:600;letter-spacing:-.015em;color:var(--ink-900);margin:0}
+  .mock-sub{font-size:11.5px;color:var(--ink-500);margin-top:2px}
+  .mock-tools{display:flex;gap:8px;margin-top:12px;align-items:center}
+  .mock-tools .field{height:30px;font-size:11.5px;min-width:0;flex:1;border-radius:8px}
+  .mock-tools .pill{font-size:10.5px;padding:3px 8px}
+  .mock-tbl{
+    margin-top:12px;background:#fff;border:1px solid var(--ink-100);border-radius:10px;
+    font-size:11.5px;
+  }
+  .mock-tbl .hd{display:grid;grid-template-columns:60px 1fr 1fr 64px;gap:10px;padding:8px 12px;border-bottom:1px solid var(--ink-100);color:var(--ink-400);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase}
+  .mock-tbl .r{display:grid;grid-template-columns:60px 1fr 1fr 64px;gap:10px;padding:9px 12px;align-items:center;border-bottom:1px solid var(--ink-50)}
+  .mock-tbl .r:last-child{border-bottom:0}
+  .mock-tbl .r .dni{font-family:'JetBrains Mono';color:var(--ink-500)}
+  .mock-tbl .r .nm{display:flex;align-items:center;gap:8px;color:var(--ink-800);font-weight:500}
+  .mock-tbl .r .av{width:22px;height:22px;font-size:9px}
+  .mock-tbl .r .em{color:var(--ink-500)}
+  .mock-tbl .r .pill{font-size:9.5px;padding:1.5px 7px}
+
+  /* marketing preview */
+  .mkt{background:linear-gradient(180deg,#fff,var(--blue-50));padding:32px;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+  .mkt .eyebrow{font-size:10px;padding:4px 8px}
+  .mkt h3{font-family:'Inter';font-size:34px;line-height:1.04;letter-spacing:-.03em;margin:14px 0 0;font-weight:600;color:var(--ink-900)}
+  .mkt h3 em{font-family:'Instrument Serif';font-style:italic;font-weight:400;color:var(--blue-500)}
+  .mkt .sub{margin-top:10px;font-size:13px;color:var(--ink-500);max-width:380px}
+  .mkt .cta-row{display:flex;gap:10px;margin-top:18px}
+  .mkt .floats{display:flex;gap:10px;margin-top:auto;flex-wrap:wrap}
+
+  /* footer */
+  footer{
+    padding:48px 0 96px;color:var(--ink-500);font-size:13px;
+  }
+  footer .row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+  footer .legal{max-width:520px}
+  footer .mono{color:var(--ink-700)}
+
+  /* small + responsive */
+  @media (max-width:1080px){
+    h1.display{font-size:64px}
+    .container{padding:0 28px}
+    .section-head{grid-template-columns:80px 1fr;gap:24px}
+    .hero-meta{grid-template-columns:repeat(2,1fr)}
+    .palette-primary{grid-template-columns:1fr}
+    .logo-grid{grid-template-columns:1fr}
+    .cat-grid{grid-template-columns:repeat(3,1fr)}
+    .neutral-bar{grid-template-columns:repeat(5,1fr)}
+    .dont-grid{grid-template-columns:repeat(2,1fr)}
+    .voice{grid-template-columns:1fr}
+    .apps{grid-template-columns:1fr}
+    .type-row{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ────── reusable inline logo SVGs ────── -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ms-mark" viewBox="0 0 100 60">
+      <!-- big circle, small circle: ratio approx 3.2:1 -->
+      <circle cx="30" cy="30" r="26" fill="currentColor"/>
+      <circle cx="72" cy="38" r="10" fill="currentColor"/>
+    </symbol>
+    <symbol id="ms-lockup" viewBox="0 0 360 80">
+      <circle cx="36" cy="40" r="32" fill="currentColor"/>
+      <circle cx="86" cy="48" r="12" fill="currentColor"/>
+      <!-- wordmark in geometric sans (Inter at 600) -->
+      <text x="118" y="56" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="600" font-size="54" letter-spacing="-1.5" fill="#0D1116">MySchool</text>
+    </symbol>
+    <!-- minimal icon set -->
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5L12 4l9 7.5"/><path d="M5 10v9h14v-9"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.5"/><path d="M3 20c.5-3.5 3-5.5 6-5.5s5.5 2 6 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5c2.5 0 4 1.6 4.5 4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5v14a2 2 0 002 2h14V5a2 2 0 00-2-2H6a2 2 0 00-2 2z"/><path d="M8 7h8M8 11h8M8 15h5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M7 16v-5M12 16V8M17 16v-3"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9L12 5l9.5 4-9.5 4-9.5-4z"/><path d="M6 11v4c0 1.5 3 3 6 3s6-1.5 6-3v-4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
+  </defs>
+</svg>
+
+<!-- ────── Hero ────── -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span> MySchool Visual Identity</span>
+    <h1 class="display">MySchool<br/><em>Manual de Marca.</em></h1>
+    <p class="lede">Identidad cálida y confiable para el sistema operativo de la educación K–12. Color sereno, espaciado generoso y un símbolo geométrico amigable </p>
+
+    <dl class="hero-meta">
+      <div><dt>Product</dt><dd>MySchool — K‑12 platform</dd></div>
+      <div><dt>Audience</dt><dd>Educators · Families · Admin</dd></div>
+      <div><dt>Languages</dt><dd>Español</dd></div>
+      <div><dt>Markets</dt><dd>Perú · LATAM</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ────── Logo ────── -->
+<section class="band" id="logo">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num"></div>
+      <div>
+        <h2 class="section-title">La Marca</h2>
+        <p class="section-kicker">Dos círculos. Uno más grande para la institución, uno más pequeño para el estudiante. El símbolo siempre se alinea en ritmo horizontal con el nombre de la marca, nunca por encima.</p>
+      </div>
+    </div>
+
+    <div class="logo-grid">
+      <div class="panel">
+        <span class="label">Principal</span>
+        <div class="logo-stage">
+          <svg width="440" height="98" style="color:var(--blue-500)"><use href="#ms-lockup"/></svg>
+        </div>
+      </div>
+      <div class="panel" style="background:var(--blue-50);border-color:var(--blue-100)">
+        <span class="label" style="color:var(--blue-700)">Solo Marca</span>
+        <div class="logo-stage">
+          <svg width="200" height="120" style="color:var(--blue-500)"><use href="#ms-mark"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="logo-row-3">
+      <div class="panel dark">
+        <span class="label">On dark</span>
+        <div class="logo-stage small">
+          <svg width="280" height="62" style="color:#fff"><use href="#ms-lockup"/></svg>
+        </div>
+      </div>
+      <div class="panel blue">
+        <span class="label">On primary</span>
+        <div class="logo-stage small">
+          <svg width="280" height="62" style="color:#fff"><use href="#ms-lockup"/></svg>
+        </div>
+      </div>
+      <div class="panel">
+        <span class="label">Monochrome</span>
+        <div class="logo-stage small">
+          <svg width="280" height="62" style="color:var(--ink-900)"><use href="#ms-lockup"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="logo-row-2">
+      <div class="panel">
+        <span class="label">Clear space</span>
+        <p class="body-m" style="margin:30px 0 18px">Reservar un margen igual al diámetro del punto.( <span class="mono code-s">x</span> ) en los cuatro lados del conjunto. Nunca permitir que otros elementos crucen este límite.</p>
+        <div class="clearspace">
+          <div class="clearspace-inner">
+            <svg width="220" height="50" style="color:var(--blue-500)"><use href="#ms-lockup"/></svg>
+          </div>
+          <span class="clearspace-x" style="top:8px;left:8px">x</span>
+          <span class="clearspace-x" style="bottom:8px;right:8px">x</span>
+        </div>
+      </div>
+      <div class="panel">
+        <span class="label">Sizing</span>
+        <p class="body-m" style="margin:30px 0 18px">Tamaño mínimo legible: <span class="mono code-s">24&nbsp;px</span> para la marca, <span class="mono code-s">96&nbsp;px</span> para el lockup completo. Usa la marca sola por debajo de ese umbral.</p>
+        <div class="sizing">
+          <div class="sizing-item">
+            <svg width="36" height="22" style="color:var(--blue-500)"><use href="#ms-mark"/></svg>
+            <span class="lab">24 px · favicon</span>
+          </div>
+          <div class="sizing-item">
+            <svg width="56" height="34" style="color:var(--blue-500)"><use href="#ms-mark"/></svg>
+            <span class="lab">40 px · app icon</span>
+          </div>
+          <div class="sizing-item">
+            <svg width="180" height="40" style="color:var(--blue-500)"><use href="#ms-lockup"/></svg>
+            <span class="lab">96 px · nav</span>
+          </div>
+          <div class="sizing-item">
+            <svg width="300" height="68" style="color:var(--blue-500)"><use href="#ms-lockup"/></svg>
+            <span class="lab">240 px · hero</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dont-grid">
+      <div class="dont">
+        <div class="stage">
+          <svg width="160" height="36" style="color:var(--blue-500);transform:rotate(-12deg)"><use href="#ms-lockup"/></svg>
+        </div>
+        <div class="cap"><span class="x">×</span> No rotar la marca</label></div>
+      </div>
+      <div class="dont">
+        <div class="stage">
+          <svg width="160" height="36" style="color:#E5A30B"><use href="#ms-lockup"/></svg>
+        </div>
+        <div class="cap"><span class="x">×</span> No recolorar fuera de la paleta</div>
+      </div>
+      <div class="dont">
+        <div class="stage">
+          <svg width="100" height="60" style="color:var(--blue-500);transform:scaleY(1.4)"><use href="#ms-mark"/></svg>
+        </div>
+        <div class="cap"><span class="x">×</span> No estirar ni comprimir</div>
+      </div>
+      <div class="dont">
+        <div class="stage" style="background:linear-gradient(135deg,#ff6ec7,#ffd56b);border-radius:8px">
+          <svg width="160" height="36" style="color:#fff"><use href="#ms-lockup"/></svg>
+        </div>
+        <div class="cap"><span class="x">×</span> No colocar sobre fondos ocupados</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── Color ────── -->
+<section class="band" id="color" style="background:#fff">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num"></div>
+      <div>
+        <h2 class="section-title">Sistema de Colores</h2>
+        <p class="section-kicker">El único azul confiado hace el trabajo pesado. Neutrales fríos llevan el resto. Una paleta de categorías suave replica los tonos de los avatares utilizados en todo el producto, amigable sin ser infantil.</p>
+      </div>
+    </div>
+
+    <div class="palette-primary">
+      <div class="swatch-hero">
+        <div>
+          <div class="name">Primary · MySchool Blue</div>
+          <div class="nm">Cerulean 500</div>
+        </div>
+        <div class="vals">
+          <span class="k">HEX</span><span>#0FA9E8</span>
+          <span class="k">RGB</span><span>15 · 169 · 232</span>
+          <span class="k">HSL</span><span>197° 89% 48%</span>
+          <span class="k">OKLCH</span><span>0.69 0.15 232</span>
+          <span class="k">CMYK</span><span>76 · 17 · 0 · 0</span>
+          <span class="k">PMS</span><span>2925 C (closest)</span>
+        </div>
+      </div>
+
+      <div class="scale">
+        <div class="scale-row"><div class="scale-chip" style="background:var(--blue-50)"></div><div class="nm">Blue / 50</div><div class="hx">#EAF7FE</div></div>
+        <div class="scale-row"><div class="scale-chip" style="background:var(--blue-100)"></div><div class="nm">Blue / 100</div><div class="hx">#CFEDFB</div></div>
+        <div class="scale-row"><div class="scale-chip" style="background:var(--blue-200)"></div><div class="nm">Blue / 200</div><div class="hx">#A3DEF7</div></div>
+        <div class="scale-row"><div class="scale-chip" style="background:var(--blue-300)"></div><div class="nm">Blue / 300</div><div class="hx">#6CC9F1</div></div>
+        <div class="scale-row"><div class="scale-chip" style="background:var(--blue-400)"></div><div class="nm">Blue / 400</div><div class="hx">#34B5EB</div></div>
+        <div class="scale-row" style="background:var(--blue-50);border-color:var(--blue-100)"><div class="scale-chip" style="background:var(--blue-500);border-color:rgba(0,0,0,.1)"></div><div class="nm">Blue / 500 — Primary</div><div class="hx">#0FA9E8</div></div>
+        <div class="scale-row"><div class="scale-chip" style="background:var(--blue-600)"></div><div class="nm">Blue / 600</div><div class="hx">#0A8AC0</div></div>
+        <div class="scale-row"><div class="scale-chip" style="background:var(--blue-700)"></div><div class="nm">Blue / 700</div><div class="hx">#086C97</div></div>
+        <div class="scale-row"><div class="scale-chip" style="background:var(--blue-800)"></div><div class="nm">Blue / 800</div><div class="hx">#064F6F</div></div>
+        <div class="scale-row"><div class="scale-chip" style="background:var(--blue-900)"></div><div class="nm">Blue / 900</div><div class="hx">#053A52</div></div>
+      </div>
+    </div>
+
+    <!-- Neutrals -->
+    <div class="palette-neutrals" style="margin-top:48px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
+        <h3 style="margin:0;font-size:18px;letter-spacing:-.01em;font-weight:600;color:var(--ink-900)">Tinta — cool neutrals</h3>
+        <span class="body-m" style="color:var(--ink-400);font-size:13px">Usar para superficies, texto, divisores · hue ≈ 215°</span>
+      </div>
+      <div class="neutral-bar">
+        <div style="background:var(--ink-0);   color:var(--ink-700)"><span class="lb">Ink 0</span><span class="hx">#FFFFFF</span></div>
+        <div style="background:var(--ink-25);  color:var(--ink-700)"><span class="lb">Ink 25</span><span class="hx">#FAFBFC</span></div>
+        <div style="background:var(--ink-50);  color:var(--ink-700)"><span class="lb">Ink 50</span><span class="hx">#F4F6F8</span></div>
+        <div style="background:var(--ink-100); color:var(--ink-700)"><span class="lb">Ink 100</span><span class="hx">#E9ECEF</span></div>
+        <div style="background:var(--ink-200); color:var(--ink-700)"><span class="lb">Ink 200</span><span class="hx">#D9DEE3</span></div>
+        <div style="background:var(--ink-300); color:var(--ink-800)"><span class="lb">Ink 300</span><span class="hx">#B7BFC7</span></div>
+        <div style="background:var(--ink-400); color:#fff"><span class="lb">Ink 400</span><span class="hx">#8B95A0</span></div>
+        <div style="background:var(--ink-500); color:#fff"><span class="lb">Ink 500</span><span class="hx">#5F6B77</span></div>
+        <div style="background:var(--ink-700); color:#fff"><span class="lb">Ink 700</span><span class="hx">#2A333C</span></div>
+        <div style="background:var(--ink-900); color:#fff"><span class="lb">Ink 900</span><span class="hx">#0D1116</span></div>
+      </div>
+    </div>
+
+    <!-- category / avatar -->
+    <div style="margin-top:48px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
+        <h3 style="margin:0;font-size:18px;letter-spacing:-.01em;font-weight:600;color:var(--ink-900)">Paleta de categorías suave</h3>
+        <span class="body-m" style="color:var(--ink-400);font-size:13px">Para avatares, etiquetas, chips de categoría · nunca como CTA principal</span>
+      </div>
+      <div class="cat-grid">
+        <div class="cat"><div class="ball" style="background:var(--mint);color:var(--mint-ink)">JG</div><div><div class="nm">Mint</div><div class="hx">#BFEED9 / #1E8F5F</div></div></div>
+        <div class="cat"><div class="ball" style="background:var(--amber);color:var(--amber-ink)">RA</div><div><div class="nm">Amber</div><div class="hx">#FBE0A8 / #9A6A0C</div></div></div>
+        <div class="cat"><div class="ball" style="background:var(--teal);color:var(--teal-ink)">JE</div><div><div class="nm">Teal</div><div class="hx">#BFE7DF / #2A7A6B</div></div></div>
+        <div class="cat"><div class="ball" style="background:var(--sage);color:var(--sage-ink)">AL</div><div><div class="nm">Sage</div><div class="hx">#C9EBC2 / #3F8A37</div></div></div>
+        <div class="cat"><div class="ball" style="background:var(--lilac);color:var(--lilac-ink)">JM</div><div><div class="nm">Lilac</div><div class="hx">#DCD2F3 / #6E55B5</div></div></div>
+        <div class="cat"><div class="ball" style="background:var(--peach);color:var(--peach-ink)">CH</div><div><div class="nm">Peach</div><div class="hx">#F8D6C2 / #B0541D</div></div></div>
+      </div>
+    </div>
+
+    <!-- usage -->
+    <div style="margin-top:48px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
+        <h3 style="margin:0;font-size:18px;letter-spacing:-.01em;font-weight:600;color:var(--ink-900)">Ratio de Uso</h3>
+        <span class="body-m" style="color:var(--ink-400);font-size:13px">Guidance, not a rule</span>
+      </div>
+      <div class="usage-bars">
+        <div class="usage-bar">
+          <span class="label">Surface</span>
+          <div class="track"><div class="seg" style="width:78%;background:var(--ink-0);border-right:1px solid var(--ink-100)"></div><div class="seg" style="width:14%;background:var(--ink-50)"></div><div class="seg" style="width:8%;background:var(--ink-900)"></div></div>
+        </div>
+        <div class="usage-bar">
+          <span class="label">Accent</span>
+          <div class="track"><div class="seg" style="width:74%;background:var(--ink-100)"></div><div class="seg" style="width:14%;background:var(--blue-500)"></div><div class="seg" style="width:12%;background:var(--blue-50)"></div></div>
+        </div>
+        <div class="usage-bar">
+          <span class="label">Category</span>
+          <div class="track"><div class="seg" style="width:60%;background:var(--ink-100)"></div><div class="seg" style="width:7%;background:var(--mint)"></div><div class="seg" style="width:7%;background:var(--amber)"></div><div class="seg" style="width:7%;background:var(--teal)"></div><div class="seg" style="width:7%;background:var(--sage)"></div><div class="seg" style="width:6%;background:var(--lilac)"></div><div class="seg" style="width:6%;background:var(--peach)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── Typography ────── -->
+<section class="band" id="type">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num"></div>
+      <div>
+        <h2 class="section-title">Tipografía</h2>
+        <p class="section-kicker">Inter hace todo el trabajo  es neutral, multilingüe y se lee con claridad en tamaños pequeños de interfaz. El peso y el contraste de color, no una segunda tipografía, sostienen los acentos editoriales. JetBrains Mono aparece para identificadores como números de DNI y códigos.</p>
+      </div>
+    </div>
+
+    <div class="type-stack">
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="nm">Display</div>
+          <div class="role">Inter SemiBold</div>
+          <div class="specs">88 / 0.96<br/>-4.5% tracking<br/>Hero headlines</div>
+        </div>
+        <div class="type-sample">
+          <div class="display-xl">El día escolar, <span class="serif" style="color:var(--blue-500)">organizado.</span></div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="nm">Editorial</div>
+          <div class="role">Instrument Serif Italic</div>
+          <div class="specs">72 / 1.0<br/>-2% tracking<br/>Accent phrases only</div>
+        </div>
+        <div class="type-sample">
+          <div class="display-serif">para toda la familia</div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="nm">Headings</div>
+          <div class="role">Inter SemiBold</div>
+          <div class="specs">56 → 32 / 1.05–1.2<br/>-3% to -2% tracking<br/>Section + card titles</div>
+        </div>
+        <div class="type-sample">
+          <div class="display-l">Padres y apoderados</div>
+          <div class="head-m" style="margin-top:16px">Centro de Atención Familiar</div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="nm">Body</div>
+          <div class="role">Inter Regular / Medium</div>
+          <div class="specs">18 / 1.55 — lede<br/>14.5 / 1.55 — UI<br/>0 tracking</div>
+        </div>
+        <div class="type-sample">
+          <div class="body-l">Busca y revisa la información de los padres y su vínculo con los estudiantes — en una sola vista, con filtros por nivel, grado y sección.</div>
+          <div class="body-m" style="margin-top:12px">Standard UI body. Used inside cards, tables, and form fields. Tight enough for density, loose enough to scan in long lists.</div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="nm">Mono</div>
+          <div class="role">JetBrains Mono</div>
+          <div class="specs">13 / 1.55<br/>For IDs and codes only</div>
+        </div>
+        <div class="type-sample">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <span class="code-s">DNI · 71483653</span>
+            <span class="code-s">Aula 4-B</span>
+            <span class="code-s">2026-T2</span>
+            <span class="code-s">ms_a8f3c2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── Components ────── -->
+<section class="band" id="components" style="background:#fff">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num"></div>
+      <div>
+        <h2 class="section-title">Componentes principales</h2>
+        <p class="section-kicker">Radios de 10 píxeles suaves, bordes de un solo píxel, superficies de baja saturación. Los elementos interactivos se apoyan en el azul principal; todo lo demás es tranquilo y se aleja del camino.</p>
+      </div>
+    </div>
+
+    <div class="comp-grid">
+
+      <!-- Buttons -->
+      <div class="card span-6">
+        <h3>Botones</h3>
+        <div class="demo" style="flex-direction:row;flex-wrap:wrap;gap:12px">
+          <button class="btn btn-primary">Crear estudiante <svg><use href="#i-plus"/></svg></button>
+          <button class="btn btn-secondary">Exportar</button>
+          <button class="btn btn-ghost">Cancelar</button>
+          <button class="btn btn-primary btn-sm">Guardar</button>
+          <button class="btn btn-secondary btn-sm">Filtros</button>
+          <button class="btn btn-secondary btn-icon btn-sm" aria-label="Search"><svg><use href="#i-search"/></svg></button>
+        </div>
+        <p class="body-m" style="margin-top:18px;color:var(--ink-500);font-size:13px">Acción primaria solo una vez por vista. Combinar una primaria con como máximo una secundaria. Botones fantasma para acciones terciarias dentro de superficies densas.</p>
+      </div>
+
+      <!-- Pills / Status -->
+      <div class="card span-6">
+        <h3>Tags &amp; status</h3>
+        <div class="demo" style="flex-direction:row;flex-wrap:wrap;gap:8px">
+          <span class="pill">Padre</span>
+          <span class="pill blue">Activo</span>
+          <span class="pill green">Al día</span>
+          <span class="pill amber">Pendiente</span>
+          <span class="pill red">Vencido</span>
+          <span class="pill">3.°A · Secundaria</span>
+        </div>
+        <div class="demo" style="flex-direction:row;flex-wrap:wrap;gap:8px;margin-top:8px">
+          <span class="pill" style="background:var(--mint);color:var(--mint-ink);border-color:transparent">Matemática</span>
+          <span class="pill" style="background:var(--amber);color:var(--amber-ink);border-color:transparent">Historia</span>
+          <span class="pill" style="background:var(--lilac);color:var(--lilac-ink);border-color:transparent">Arte</span>
+          <span class="pill" style="background:var(--teal);color:var(--teal-ink);border-color:transparent">Ciencias</span>
+        </div>
+      </div>
+
+      <!-- Avatars -->
+      <div class="card span-4">
+        <h3>Avatares</h3>
+        <div class="demo">
+          <div class="av-row">
+            <span class="avatar" style="background:var(--mint);color:var(--mint-ink)">JG</span>
+            <span class="avatar" style="background:var(--amber);color:var(--amber-ink)">RA</span>
+            <span class="avatar" style="background:var(--teal);color:var(--teal-ink)">JE</span>
+            <span class="avatar" style="background:var(--sage);color:var(--sage-ink)">AL</span>
+            <span class="avatar" style="background:var(--lilac);color:var(--lilac-ink)">JM</span>
+            <span class="avatar" style="background:var(--peach);color:var(--peach-ink)">CH</span>
+          </div>
+          <p class="body-m" style="font-size:13px;color:var(--ink-500);margin:0">Asignado de forma determinista a partir del nombre completo del usuario — la misma persona, el mismo color en todo el producto.</p>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div class="card span-4">
+        <h3>Campo de búsqueda</h3>
+        <div class="demo">
+          <div class="field"><svg><use href="#i-search"/></svg> Buscar por nombre, email o DNI…</div>
+          <div class="seg" role="tablist">
+            <button class="on">Padres</button>
+            <button>Estudiantes</button>
+            <button>Personal</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stat -->
+      <div class="card span-4" style="background:var(--ink-25)">
+        <h3>Stat card</h3>
+        <div style="margin-top:14px">
+          <div class="stat-card" style="border:0;padding:0;background:transparent">
+            <div class="lbl">Asistencia · esta semana</div>
+            <div class="val">94.6<span style="font-size:22px;color:var(--ink-400);font-weight:500"> %</span></div>
+            <div class="delta">↑ 1.8 pts vs. semana ant.</div>
+            <svg class="spark" viewBox="0 0 200 36" fill="none" stroke="var(--blue-500)" stroke-width="2" stroke-linecap="round">
+              <path d="M2 26 L25 22 L48 24 L70 16 L92 18 L115 10 L138 14 L160 8 L182 12 L198 6"/>
+              <path d="M2 26 L25 22 L48 24 L70 16 L92 18 L115 10 L138 14 L160 8 L182 12 L198 6 L198 36 L2 36 Z" fill="var(--blue-50)" stroke="none"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Icons -->
+      <div class="card span-6">
+        <h3>Iconography</h3>
+        <p class="body-m" style="margin:8px 0 0;font-size:13px;color:var(--ink-500)">Outline, 24px box, 1.6px stroke. Rounded caps + joins. Optical alignment over geometric.</p>
+        <div class="icon-grid">
+          <div class="icon-card"><svg><use href="#i-home"/></svg></div>
+          <div class="icon-card"><svg><use href="#i-grid"/></svg></div>
+          <div class="icon-card"><svg><use href="#i-cal"/></svg></div>
+          <div class="icon-card"><svg><use href="#i-chat"/></svg></div>
+          <div class="icon-card"><svg><use href="#i-users"/></svg></div>
+          <div class="icon-card"><svg><use href="#i-book"/></svg></div>
+          <div class="icon-card"><svg><use href="#i-chart"/></svg></div>
+          <div class="icon-card"><svg><use href="#i-cap"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="card span-6">
+        <h3>Table row</h3>
+        <table class="mini-table" style="margin-top:8px">
+          <thead><tr><th>DNI</th><th>Nombre</th><th>Email</th><th>Rol</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="meta mono">71483653</td>
+              <td class="name"><span style="display:inline-flex;align-items:center;gap:10px"><span class="avatar" style="background:var(--mint);color:var(--mint-ink);width:26px;height:26px;font-size:10px">JG</span> Jhon Guido Romero</span></td>
+              <td class="meta">jhongui3400@hotmail.com</td>
+              <td><span class="pill">Padre</span></td>
+            </tr>
+            <tr>
+              <td class="meta mono">24886131</td>
+              <td class="name"><span style="display:inline-flex;align-items:center;gap:10px"><span class="avatar" style="background:var(--amber);color:var(--amber-ink);width:26px;height:26px;font-size:10px">RA</span> Roberto A. Nuñoncca</span></td>
+              <td class="meta">benicitarh@gmail.com</td>
+              <td><span class="pill">Padre</span></td>
+            </tr>
+            <tr>
+              <td class="meta mono">46159933</td>
+              <td class="name"><span style="display:inline-flex;align-items:center;gap:10px"><span class="avatar" style="background:var(--teal);color:var(--teal-ink);width:26px;height:26px;font-size:10px">JE</span> Juan Enrique Flores</span></td>
+              <td class="meta">juanflorest23@gmail.com</td>
+              <td><span class="pill">Padre</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Spacing / radius / shadow -->
+      <div class="card span-12">
+        <h3>Spacing, radii &amp; elevation</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:16px">
+          <div>
+            <div class="mono" style="font-size:11px;color:var(--ink-400);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Spacing scale · 4 px</div>
+            <div style="display:flex;align-items:flex-end;gap:8px;height:72px">
+              <div style="width:4px;height:4px;background:var(--blue-500);border-radius:2px"></div>
+              <div style="width:8px;height:8px;background:var(--blue-500);border-radius:2px"></div>
+              <div style="width:12px;height:12px;background:var(--blue-500);border-radius:2px"></div>
+              <div style="width:16px;height:16px;background:var(--blue-500);border-radius:3px"></div>
+              <div style="width:24px;height:24px;background:var(--blue-500);border-radius:4px"></div>
+              <div style="width:32px;height:32px;background:var(--blue-500);border-radius:5px"></div>
+              <div style="width:48px;height:48px;background:var(--blue-500);border-radius:6px"></div>
+              <div style="width:64px;height:64px;background:var(--blue-500);border-radius:8px"></div>
+            </div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-400);margin-top:8px">4 · 8 · 12 · 16 · 24 · 32 · 48 · 64</div>
+          </div>
+          <div>
+            <div class="mono" style="font-size:11px;color:var(--ink-400);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Radii</div>
+            <div style="display:flex;gap:14px;align-items:center">
+              <div style="width:56px;height:56px;background:var(--blue-50);border:1px solid var(--blue-100);border-radius:6px"></div>
+              <div style="width:56px;height:56px;background:var(--blue-50);border:1px solid var(--blue-100);border-radius:10px"></div>
+              <div style="width:56px;height:56px;background:var(--blue-50);border:1px solid var(--blue-100);border-radius:16px"></div>
+              <div style="width:56px;height:56px;background:var(--blue-50);border:1px solid var(--blue-100);border-radius:24px"></div>
+              <div style="width:56px;height:56px;background:var(--blue-50);border:1px solid var(--blue-100);border-radius:50%"></div>
+            </div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-400);margin-top:8px">sm 6 · md 10 · lg 16 · xl 24 · full</div>
+          </div>
+          <div>
+            <div class="mono" style="font-size:11px;color:var(--ink-400);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Elevation</div>
+            <div style="display:flex;gap:18px;align-items:center">
+              <div style="width:64px;height:64px;border-radius:10px;background:#fff;box-shadow:var(--shadow-sm)"></div>
+              <div style="width:64px;height:64px;border-radius:10px;background:#fff;box-shadow:var(--shadow-md)"></div>
+              <div style="width:64px;height:64px;border-radius:10px;background:#fff;box-shadow:var(--shadow-lg)"></div>
+            </div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-400);margin-top:8px">sm — inputs · md — popovers · lg — modals</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ────── Voice ────── -->
+<section class="band" id="voice">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num"></div>
+      <div>
+        <h2 class="section-title">Tono &amp Voz</h2>
+        <p class="section-kicker">We write like a thoughtful coordinator at the school office: direct, warm, never patronising. We default to Spanish, address users with "tú", and explain the why before the how.</p>
+      </div>
+    </div>
+
+    <div class="voice">
+      <div class="v">
+        <span class="kk">Clear · Claro</span>
+        <p class="ph">"Busca por nombre, email o DNI."</p>
+        <ul>
+          <li>Empieza con el verbo.</li>
+          <li>Denomina el campo, no la etiqueta de acción.</li>
+          <li>No uses jerga que las familias no conocerían.</li>
+        </ul>
+      </div>
+      <div class="v">
+        <span class="kk">Warm · Cercano</span>
+        <p class="ph">"Hola, Sra. Romero. Tienes 2 mensajes nuevos."</p>
+        <ul>
+          <li>Saluda por nombre cuando lo sepas.</li>
+          <li>"Tú" con padres; "ustedes" para grupos</li>
+          <li>Español coloquial antes de institucional</li>
+        </ul>
+      </div>
+      <div class="v">
+        <span class="kk">Confident · Confiable</span>
+        <p class="ph">"Guardado. Verás el cambio en el siguiente cierre."</p>
+        <ul>
+          <li>Menciona resultados </li>
+          <li>Explica las consecuencias, no la tecnología.</li>
+          <li>No disculpes donde un hecho sea suficiente.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── Applications ────── -->
+<section class="band" id="applications" style="background:#fff">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num"></div>
+      <div>
+        <h2 class="section-title">En uso</h2>
+        <p class="section-kicker">Una superficie de producto y una superficie de marketing, ambas extraídas del mismo conjunto de tokens. El mismo azul, los mismos neutros, la misma tipografía — solo cambian la densidad y la escala.</p>
+      </div>
+    </div>
+
+    <div class="apps">
+      <!-- Product mock -->
+      <div class="app">
+        <div class="frame">
+          <aside class="mock-side">
+            <div class="top">
+              <svg width="22" height="14" style="color:var(--blue-500)"><use href="#ms-mark"/></svg>
+              <span style="font-weight:600;font-size:12.5px;color:var(--ink-900);letter-spacing:-.01em">MySchool</span>
+            </div>
+            <div class="item"><span class="dt"></span> Inicio</div>
+            <div class="item"><span class="dt"></span> Plataforma</div>
+            <div class="item"><span class="dt"></span> Comunicaciones</div>
+            <div class="item"><span class="dt"></span> Calendario</div>
+            <div class="item"><span class="dt"></span> Estudiantes</div>
+            <div class="item on"><span class="dt"></span> Padres</div>
+            <div class="item"><span class="dt"></span> Personal</div>
+            <div class="item"><span class="dt"></span> Cursos</div>
+          </aside>
+          <main class="mock-main">
+            <h4 class="mock-h">Padres</h4>
+            <div class="mock-sub">Busca y revisa la información de los padres.</div>
+            <div class="mock-tools">
+              <div class="field"><svg><use href="#i-search"/></svg> Buscar por nombre…</div>
+              <span class="pill blue">Todos los niveles</span>
+              <span class="pill">5.°</span>
+            </div>
+            <div class="mock-tbl">
+              <div class="hd"><span>DNI</span><span>Nombre</span><span>Email</span><span>Rol</span></div>
+              <div class="r">
+                <span class="dni">71483653</span>
+                <span class="nm"><span class="avatar av" style="background:var(--mint);color:var(--mint-ink)">JG</span>Jhon Guido</span>
+                <span class="em">jhongui3400@…</span>
+                <span><span class="pill">Padre</span></span>
+              </div>
+              <div class="r">
+                <span class="dni">24886131</span>
+                <span class="nm"><span class="avatar av" style="background:var(--amber);color:var(--amber-ink)">RA</span>Roberto A.</span>
+                <span class="em">benicitarh@…</span>
+                <span><span class="pill">Padre</span></span>
+              </div>
+              <div class="r">
+                <span class="dni">46159933</span>
+                <span class="nm"><span class="avatar av" style="background:var(--teal);color:var(--teal-ink)">JE</span>Juan Enrique</span>
+                <span class="em">juanflorest23@…</span>
+                <span><span class="pill">Padre</span></span>
+              </div>
+              <div class="r">
+                <span class="dni">46588658</span>
+                <span class="nm"><span class="avatar av" style="background:var(--sage);color:var(--sage-ink)">AL</span>Albert Q.</span>
+                <span class="em">scarfalberth@…</span>
+                <span><span class="pill">Padre</span></span>
+              </div>
+              <div class="r">
+                <span class="dni">25000508</span>
+                <span class="nm"><span class="avatar av" style="background:var(--lilac);color:var(--lilac-ink)">JM</span>Jesús M.</span>
+                <span class="em">theking.cusco@…</span>
+                <span><span class="pill">Padre</span></span>
+              </div>
+            </div>
+          </main>
+        </div>
+        <div class="cap"><span>Product · Padres list</span><span class="mono">myschool.com.pe / padres</span></div>
+      </div>
+
+      <!-- Marketing mock -->
+      <div class="app">
+        <div class="frame">
+          <div class="mkt">
+            <div>
+              <span class="eyebrow"><span class="dot"></span> Para colegios</span>
+              <h3>Todo el colegio,<br/>en <em>un&nbsp;solo&nbsp;lugar.</em></h3>
+              <div class="sub">La plataforma que conecta a directores, docentes y familias — desde la asistencia hasta la boleta de notas.</div>
+              <div class="cta-row">
+                <button class="btn btn-primary">Solicitar demo <svg><use href="#i-arrow"/></svg></button>
+                <button class="btn btn-secondary">Ver precios</button>
+              </div>
+            </div>
+            <div class="floats">
+              <div style="background:#fff;border:1px solid var(--ink-100);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:10px">
+                <span class="avatar" style="background:var(--mint);color:var(--mint-ink);width:28px;height:28px;font-size:10px">JG</span>
+                <div>
+                  <div style="font-size:12px;font-weight:600;color:var(--ink-900);line-height:1.2">Jhon firmó la circular</div>
+                  <div style="font-size:11px;color:var(--ink-500)">hace 4 min</div>
+                </div>
+              </div>
+              <div style="background:#fff;border:1px solid var(--ink-100);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:10px">
+                <div style="width:28px;height:28px;border-radius:50%;background:var(--blue-50);color:var(--blue-600);display:grid;place-items:center"><svg width="14" height="14"><use href="#i-chart"/></svg></div>
+                <div>
+                  <div style="font-size:12px;font-weight:600;color:var(--ink-900);line-height:1.2">Asistencia · 94.6%</div>
+                  <div style="font-size:11px;color:var(--ink-500)">5.° Secundaria</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cap"><span>Marketing · Hero</span><span class="mono">myschool.com.pe</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── Footer ────── -->
+<footer>
+  <div class="container row">
+    <span class="lockup">
+      <svg width="34" height="22" style="color:var(--blue-500)"><use href="#ms-mark"/></svg>
+      <span class="word">MySchool</span>
+    </span>
+    <div class="legal">
+      <div class="mono">Brand Kit v1.0 · May 2026</div>
+      <div style="margin-top:4px">An original identity system for the MySchool education platform. All marks are property of MySchool.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
